@@ -1,0 +1,33 @@
+<h1>{{producto.nombre | uppercase}}</h1>
+<!-- fecha | date:'y'-->
+<hr>
+<div class="row">
+    <div class="col-md-4">
+        <img src="{{producto.img}}" class="img-fluid" alt="">
+        <br><br>
+        <button [routerLink]="['productos']" class="btn btn-outline-danger btn-block">regresar</button>
+    </div>
+    <div class="col-md-8">
+        <h3></h3>
+        <hr>
+        <h4>
+            {{producto.casa}}
+        </h4>
+        <hr>
+        <h5>
+            Precio: {{producto.aparicion}}
+        </h5>
+        <hr>
+        <p>
+            {{producto.bio}}
+        </p>
+
+        <div>
+
+        </div>
+    </div>
+
+
+
+</div>
+<br><br>

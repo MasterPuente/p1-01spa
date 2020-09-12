@@ -1,0 +1,15 @@
+<hr>
+<div class="card-columns">
+    <div class="card" *ngFor="let producto of productos; let i = index">
+        <img src="{{producto.img}}" class="card-img-top" alt="...">
+        <div class="card-body">
+            <h5 class="card-title">{{producto.nombre}}</h5>
+            <p class="card-text"> {{producto.casa}}</p>
+            <p class="card-text">Precio: {{producto.aparicion}}</p>
+
+            <button (click)="verProducto(i)" type="button" class="btn btn-outline-primary btn-block">Ver mas... </button>
+            <!-- <a (click)="verProducto(i)" class="btn btn-outline-primary">ver mas xd </a> -->
+
+        </div>
+    </div>
+</div>

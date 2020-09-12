@@ -1,0 +1,23 @@
+<h1>Buscando: <small>{{ termino }}</small></h1>
+<hr>
+<div class="row animated fadeIn fast" *ngIf="productos.length == 0">
+    <div class="col-md-12">
+        <div class="alert alert-info" role="alert">
+            no existe esto: {{termino}}
+        </div>
+    </div>
+</div>
+<div class="card-columns">
+    <div class="card" *ngFor="let producto of productos">
+        <img src="{{ producto.img }}" class="card-img-top" alt="...">
+        <div class="card-body">
+            <h5 class="card-title">{{producto.nombre}}</h5>
+            <p class="card-text"> {{producto.casa}}</p>
+            <p class="card-text">Precio: {{producto.aparicion}}</p>
+
+            <button (click)="verProducto(producto.idx)" type="button" class="btn btn-outline-primary btn-block">Ver.. </button>
+            <!-- <a (click)="verProducto(i)" class="btn btn-outline-primary">ver mas xd </a> -->
+
+        </div>
+    </div>
+</div>
